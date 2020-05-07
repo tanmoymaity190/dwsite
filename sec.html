@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dark World</title>
+</head>
+
+<style>
+	{
+		box-sizing: border-box;
+	}
+
+
+	 .topnav
+	        {
+	          overflow: hidden;
+	          background-color: #333; 
+	        }
+
+	 .topnav a
+	           {
+	           	float: left;
+	           	color: #f2f2f2;
+	           	text-align: center;
+	           	padding: 14px 16px;
+	           	text-decoration: none;
+	           	font-size: 17px;
+	           }
+
+	 .topnav a:hover
+	                {
+	                 background-color: #ddd;
+	                 color: black;
+	                }
+
+	 .topnav a.active
+	                  {
+	                  	background-color: #4CAF50;
+	                  	color: white;
+	                  }
+</style>
+
+<body style="background-color:black">
+
+	<p align="center">
+		<img src="dark.jpg" style="width:100px;height:100px">
+	</p>
+
+	<p align="center"><font color="white" size="15px">
+	<u>Dark World</u>
+    </font></p>
+
+    <p align="center"><font color="white" style="font-size: 24px">
+    	Stroming Your Brain, Not Enter Your Legs
+    </font></p>
+
+    <div class="topnav">
+    	<a href="home.html">Home</a>
+    	<a class="active" href="sec.html"> System & Enviroment Configure </a>
+    	<a href="ah.html">Android Hacking</a>
+    	<a href="wh.html">Windows Hacking</a>
+    	<a href="sh.html"> Social Network Hacking </a>
+    	<a href="wph.html"> Whatsapp Hacking </a>
+    	<a href="about.html"> About </a>
+    </div>
+
+    <p align="left" style="font-size: 18px"><font color="white">
+             	There is many cases with configuration & security purposes in Kali Linux. First of  all you have to install gpg key and repository. <br>
+             	There is two gpg key named SHA256SUMS and SHA256SUMS.gpg. These key are available on KALI official website. After download it you have install. Open QTerminal and follow the steps...
+             </font></p>
+         	
+         	<p align="left" style="font-size: 18px"><font color="green">
+         		$ gpg --verify SHA256SUMS.gpg SHA256SUMS <br>
+         		$ wget -q -O - https://kali.org/archive.key.asc | gpg --import 
+         	</font></p>
+
+         	<p align="left" style="font-size: 18px"><font color="white">
+         		Now create repository to get system & security update. Open QTerminal and enter the following command...
+         		<br><br>
+           	</font></p>
+
+           	<p align="left" style="font-size: 18px"><font color="green">
+           		$ touch /etc/apt/sources.list <br>
+           		$ chmod 644 /etc/apt/sources.list <br>
+           		$ echo "deb https://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list <br>
+           		$ sudo apt-get update <br>
+           		$ sudo apt-get upgrade -y <br>
+           		$ sudo apt-get full-upgrade -y
+           	</font></p>
+
+           	<p align="left" style="font-size: 18px"><font color="white">
+         		Congrats! You are done GREAT!
+         		<br><br>
+         		To restart all services with new version make your system restart.
+           	</font></p>
+
+           <p align="left" style="font-size: 18px"><font color="green">
+           	 $ reboot
+           </font></p>
+
+           <h1 align="center"><font color="white">
+           	<u> Anonmouse Mode </u>
+           </font></h1>
+
+           <p align="left" style="font-size: 18px"><font color="white">
+           	For safty & privecy of user you have to do operation anomously from your system......<br>
+           	Fire up kali linux and open the QTerminal. Then execute the command
+           </font></p>
+
+           	<p align="left" style="font-size: 18px"><font color="green">
+           		$ git clone https://github.com/SusmithKrishnan/torghost.git <br>
+           		$ cd torghost <br>
+           		$ pip3 install -r requirements.txt <br>
+           		$ chmod +x build.sh && ./build.sh <br>
+           		$ chmod +x install.sh && ./install <br>
+           		$ sudo su <br>
+           		$ apt-get -f install
+           	</font></p>
+
+           	<p align="left" style="font-size: 18px"><font color="white">
+           	It is all set. Now you can start torghost or make traffic via tor. <br>
+           	 Use command for for operation torhost. <br>
+           	  torghost -s --start Start Torghost   <br>
+              torghost -r --switch Request new tor exit node <br>
+              torghost -x --stop Stop Torghost <br>
+              torghost -h --help Print this help and exit <br>
+            </font></p>
+
+            <h1 align="center"><font color="white">
+            	<u> Port Forwarding </u>
+           </font></h1>
+
+           <p align="left" style="font-size: 18px"><font color="white">
+           	Port Forwarding is a process to expose your local port to expose to the web. Via client software it communicate with the external server port. And data will be incoming & outgoing via it. Here I dicussed about only Ngrok client for port forwarding. <br>
+           	<br>
+           	First of all download the client from Ngrok official site https://www.ngrok.com and Register with valid credentials and the make login. Then copy the ngrok authentication token. <br>
+           	After it open the QTerminal on kali linux.
+          </font></p>
+
+          <p align="left" style="font-size: 18px"><font color="green">
+          	$ sudo su  <br>
+          	$ cd Downloads  <br>
+          	$ unzip <ngrok_client_name.zip>  <br>
+          	$ mv ngrok /usr/bin <br>
+          	$ ngrok authtoken <authentication_token> <br>
+          	$ ngrok http 80 <font color="white" style="font-size: 18px">(For HTTP port)</font> <br>
+          	$ ngrok tcp 80    <font color="white" style="font-size: 18px">(For TCP port)</font> <br>
+          </font></p>
+
+     <p align="center">
+    	<img src="as.jpg" style="width: 320px;height:320px;">
+    </p
+
+</body>
+</html>
